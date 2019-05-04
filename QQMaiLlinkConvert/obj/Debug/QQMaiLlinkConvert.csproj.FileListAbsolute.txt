@@ -1,0 +1,16 @@
+E:\QQ邮箱中转站\QQMaiLlinkConvert\QQMaiLlinkConvert\bin\Debug\QQMaiLlinkConvert.exe.config
+E:\QQ邮箱中转站\QQMaiLlinkConvert\QQMaiLlinkConvert\obj\Debug\QQMaiLlinkConvert.Form1.resources
+E:\QQ邮箱中转站\QQMaiLlinkConvert\QQMaiLlinkConvert\obj\Debug\QQMaiLlinkConvert.Properties.Resources.resources
+E:\QQ邮箱中转站\QQMaiLlinkConvert\QQMaiLlinkConvert\obj\Debug\QQMaiLlinkConvert.csproj.GenerateResource.Cache
+E:\QQ邮箱中转站\QQMaiLlinkConvert\QQMaiLlinkConvert\bin\Debug\QQMaiLlinkConvert.exe
+E:\QQ邮箱中转站\QQMaiLlinkConvert\QQMaiLlinkConvert\bin\Debug\QQMaiLlinkConvert.pdb
+E:\QQ邮箱中转站\QQMaiLlinkConvert\QQMaiLlinkConvert\obj\Debug\QQMaiLlinkConvert.exe
+E:\QQ邮箱中转站\QQMaiLlinkConvert\QQMaiLlinkConvert\obj\Debug\QQMaiLlinkConvert.pdb
+E:\MaiLlinkConvert\QQMaiLlinkConvert\bin\Debug\QQMaiLlinkConvert.exe.config
+E:\MaiLlinkConvert\QQMaiLlinkConvert\obj\Debug\QQMaiLlinkConvert.exe
+E:\MaiLlinkConvert\QQMaiLlinkConvert\obj\Debug\QQMaiLlinkConvert.pdb
+E:\MaiLlinkConvert\QQMaiLlinkConvert\bin\Debug\QQMaiLlinkConvert.exe
+E:\MaiLlinkConvert\QQMaiLlinkConvert\bin\Debug\QQMaiLlinkConvert.pdb
+E:\MaiLlinkConvert\QQMaiLlinkConvert\obj\Debug\QQMaiLlinkConvert.Form1.resources
+E:\MaiLlinkConvert\QQMaiLlinkConvert\obj\Debug\QQMaiLlinkConvert.Properties.Resources.resources
+E:\MaiLlinkConvert\QQMaiLlinkConvert\obj\Debug\QQMaiLlinkConvert.csproj.GenerateResource.Cache
