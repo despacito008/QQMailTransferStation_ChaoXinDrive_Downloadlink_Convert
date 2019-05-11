@@ -14,3 +14,11 @@ E:\QQ邮箱中转站&超星网盘分享链接\MaiLlinkConvert\QQMaiLlinkConvert\
 E:\QQ邮箱中转站&超星网盘分享链接\MaiLlinkConvert\QQMaiLlinkConvert\obj\Release\QQMaiLlinkConvert.Form1.resources
 E:\QQ邮箱中转站&超星网盘分享链接\MaiLlinkConvert\QQMaiLlinkConvert\obj\Release\QQMaiLlinkConvert.Properties.Resources.resources
 E:\QQ邮箱中转站&超星网盘分享链接\MaiLlinkConvert\QQMaiLlinkConvert\obj\Release\LlinkConvert.csproj.GenerateResource.Cache
+E:\QQ邮箱中转站&超星网盘分享链接\QQMailTransferStation_ChaoXinDrive_Downloadlink_Convert\QQMaiLlinkConvert\bin\Release\QQMaiLlinkConvert.exe.config
+E:\QQ邮箱中转站&超星网盘分享链接\QQMailTransferStation_ChaoXinDrive_Downloadlink_Convert\QQMaiLlinkConvert\obj\Release\QQMaiLlinkConvert.exe
+E:\QQ邮箱中转站&超星网盘分享链接\QQMailTransferStation_ChaoXinDrive_Downloadlink_Convert\QQMaiLlinkConvert\obj\Release\QQMaiLlinkConvert.pdb
+E:\QQ邮箱中转站&超星网盘分享链接\QQMailTransferStation_ChaoXinDrive_Downloadlink_Convert\QQMaiLlinkConvert\bin\Release\QQMaiLlinkConvert.exe
+E:\QQ邮箱中转站&超星网盘分享链接\QQMailTransferStation_ChaoXinDrive_Downloadlink_Convert\QQMaiLlinkConvert\bin\Release\QQMaiLlinkConvert.pdb
+E:\QQ邮箱中转站&超星网盘分享链接\QQMailTransferStation_ChaoXinDrive_Downloadlink_Convert\QQMaiLlinkConvert\obj\Release\QQMaiLlinkConvert.Form1.resources
+E:\QQ邮箱中转站&超星网盘分享链接\QQMailTransferStation_ChaoXinDrive_Downloadlink_Convert\QQMaiLlinkConvert\obj\Release\QQMaiLlinkConvert.Properties.Resources.resources
+E:\QQ邮箱中转站&超星网盘分享链接\QQMailTransferStation_ChaoXinDrive_Downloadlink_Convert\QQMaiLlinkConvert\obj\Release\LlinkConvert.csproj.GenerateResource.Cache

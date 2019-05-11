@@ -33,9 +33,10 @@
             this.convert = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.TopcheckBox = new System.Windows.Forms.CheckBox();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             this.label2 = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // convert
@@ -73,11 +74,6 @@
             this.TopcheckBox.Text = "窗口是否置顶";
             this.TopcheckBox.UseVisualStyleBackColor = true;
             // 
-            // timer1
-            // 
-            this.timer1.Enabled = true;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
             // notifyIcon1
             // 
             this.notifyIcon1.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIcon1.Icon")));
@@ -93,12 +89,28 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "2.选中超星网盘文件后，快捷键:Ctrl+Q，也可获取分享链接";
             // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.label3.Location = new System.Drawing.Point(368, 147);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(116, 18);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "By：阿虚同学";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(508, 154);
+            this.ClientSize = new System.Drawing.Size(508, 174);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.TopcheckBox);
             this.Controls.Add(this.label1);
@@ -106,9 +118,9 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(530, 210);
+            this.MaximumSize = new System.Drawing.Size(530, 230);
             this.MinimizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(530, 210);
+            this.MinimumSize = new System.Drawing.Size(530, 230);
             this.Name = "Form1";
             this.Text = "获取QQ邮箱中转站 / 超星云盘分享链接";
             this.Deactivate += new System.EventHandler(this.Form1_Deactivate);
@@ -122,9 +134,10 @@
         private System.Windows.Forms.Button convert;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.CheckBox TopcheckBox;
-        private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.NotifyIcon notifyIcon1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Label label3;
     }
 }
 

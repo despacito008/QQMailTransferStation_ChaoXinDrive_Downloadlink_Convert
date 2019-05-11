@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
+using System.Threading;
 
 namespace QQMaiLlinkConvert
 {
@@ -57,6 +58,31 @@ namespace QQMaiLlinkConvert
             MessageBox.Show("链接转换成功并已复制到剪贴板", "复制成功");
         }
 
+        public void somethingToRunInThread()
+        {
+            string sharelink;
+            string Share1 = "https://pan-yz.chaoxing.com/external/m/file/";
+
+            string originallink = Clipboard.GetText();
+            //根据特定字符："node_name_"和"\" style"分割字符串，（\"是转义字符）
+            string[] chaoxin = originallink.Split(new string[] { "node_name_", "\" style" }, StringSplitOptions.RemoveEmptyEntries);
+            // string[] chaoxin = originallink.Split(new char[2] { '_', '"' });
+            // 如果用上面那行办法，如果文件名中含"_"将会导致获取链接错误
+            sharelink = Share1 + chaoxin[1];
+            Clipboard.SetText(sharelink);
+            notifyIcon1.ShowBalloonTip(200, "链接转换成功并已复制到剪贴板", sharelink, ToolTipIcon.None);
+
+        }
+
+        public void GetClipboard()
+        {
+            Thread myThread = new Thread(somethingToRunInThread);
+            //注意，一般启动一个线程的时候没有这句话，但是要操作剪切板的话这句话是必需要加上的，因为剪切板只能在单线
+            //程单元中访问，这里的STA就是指单线程单元
+            myThread.SetApartmentState(ApartmentState.STA);
+            myThread.Start();
+        }
+
         //模拟键盘事件
         [DllImport("user32.dll", EntryPoint = "keybd_event", SetLastError = true)]
         public static extern void keybd_event(Keys bVk, byte bScan, uint dwFlags, uint dwExtraInfo);
@@ -81,7 +107,7 @@ namespace QQMaiLlinkConvert
         const int MOUSEEVENTF_MIDDLEUP = 0x0040;
         //标示是否采用绝对坐标 
         const int MOUSEEVENTF_ABSOLUTE = 0x8000;
-        
+
         //导入dll文件
         [DllImport("user32.dll")]
         //函数声明
@@ -89,17 +115,18 @@ namespace QQMaiLlinkConvert
         //时钟监控事件 Interval =100
         private void timer1_Tick(object sender, EventArgs e)
         {
-            //需要监控什么按键就写某个按键的ASCII码
+            //需要监控什么按键就写某个按键的ascii码
             if (GetAsyncKeyState(17) != 0 & GetAsyncKeyState(81) != 0)
             {
+                Clipboard.Clear();
                 //模拟鼠标右键
                 mouse_event(MOUSEEVENTF_RIGHTDOWN | MOUSEEVENTF_RIGHTUP, 0, 0, 0, 0);
-                System.Threading.Thread.Sleep(200);
+                System.Threading.Thread.Sleep(300);
                 //模拟Ctrl+Shift+I
                 keybd_event(Keys.N, 0, 0, 0);
                 keybd_event(Keys.N, 0, KEYEVENTF_KEYUP, 0);
                 //延时1S
-                System.Threading.Thread.Sleep(1500);
+                System.Threading.Thread.Sleep(1200);
                 //模拟F2
                 keybd_event(Keys.F2, 0, 0, 0);
                 keybd_event(Keys.F2, 0, KEYEVENTF_KEYUP, 0);
@@ -115,25 +142,28 @@ namespace QQMaiLlinkConvert
                 keybd_event(Keys.C, 0, 0, 0);
                 keybd_event(Keys.ControlKey, 0, KEYEVENTF_KEYUP, 0);
                 keybd_event(Keys.C, 0, KEYEVENTF_KEYUP, 0);
-                System.Threading.Thread.Sleep(800);
+                System.Threading.Thread.Sleep(500);
 
-                string Share1 = "https://pan-yz.chaoxing.com/external/m/file/";
-                string originallink = "null";
-                string sharelink;
-
-                IDataObject data = Clipboard.GetDataObject();
-                if (data.GetDataPresent(DataFormats.Text))
-                {
-                    //如果剪贴板中的数据是文本格式 
-                    originallink = (string)data.GetData(DataFormats.Text);
-                    string[] chaoxin = originallink.Split(new char[2] { '_', '"' });
-                    sharelink = Share1 + chaoxin[7];
-                    Clipboard.SetDataObject(sharelink);
-                    notifyIcon1.ShowBalloonTip(200, "链接转换成功并已复制到剪贴板", sharelink, ToolTipIcon.None);
-                    notifyIcon1.Dispose();
-                }
-            }                   
+                GetClipboard();
             }
-        }
+
+            }
+
     }
+
+        }
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
 
